@@ -1,4 +1,4 @@
-BERT_BASE_DIR=/raid/ypj/openSource/chinese_L-12_H-768_A-12
+BERT_BASE_DIR="你的bert模型路径"
 DATA_DIR=../process_data
 OUTPUT_DIR=../model
 
