@@ -4,6 +4,9 @@ import os
 
 output_dir = "../process_data/"
 
+if not os.path.exists(output_dir):
+    os.mkdir(output_dir)
+
 def clean_str(input):
 
     input = input.replace(",", "，")

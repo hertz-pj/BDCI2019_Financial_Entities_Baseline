@@ -1,5 +1,6 @@
 import pandas as pd 
 import re
+import os
 
 old_entities = []
 train_df = pd.read_csv("../raw_data/Train_Data.csv", encoding="utf-8-sig")
@@ -65,6 +66,9 @@ def main():
             if islegitimate(e):
                 new.append(e)
         new_entities.append(new)
+    
+    if not os.path.exists("../result"):
+        os.mkdir("../result")
 
     Dt = pd.read_csv("../raw_data/Test_Data.csv", encoding="utf-8-sig")
     assert len(Dt) == len(new_entities)
