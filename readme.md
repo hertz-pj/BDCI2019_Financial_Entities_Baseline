@@ -8,6 +8,9 @@ BERT-BiLSTM-CRF-NER模型来源于：https://github.com/macanv/BERT-BiLSTM-CRF-N
 比赛地址：https://www.datafountain.cn/competitions/361
 
 ## 运行说明
+#### 环境
+ubuntu 18.04
+tensorflow 1.13.0(1.14的tensorflow会有错误)
 #### 硬件
 V100, 如果没有大显存，调小maxlen和batch size, 正常来说1080Ti够用
 #### 运行
