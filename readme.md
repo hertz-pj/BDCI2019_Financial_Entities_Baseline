@@ -9,8 +9,10 @@ BERT-BiLSTM-CRF-NER模型来源于：https://github.com/macanv/BERT-BiLSTM-CRF-N
 
 ## 运行说明
 #### 环境
-ubuntu 18.04
-tensorflow 1.13.0(1.14的tensorflow会有错误)
+ubuntu 18.04  
+tensorflow 1.13.0  
+关于tensorflow1.14会报'tensorflow.contrib.estimator' has no attribute 'stop_if_no_decrease_hook'的问题，原因是tf.contrib在1.14中已经被弃用。  
+解决方案：将BERT-BiLSTM-CRF-NER/bert_base/train/bert_lstm_ner.py文件内第620行的tf.contrib.estimator.stop_if_no_decrease_hook替换为 tf.estimator.experimental.stop_if_no_decrease_hook即可正常运行。
 #### 硬件
 V100, 如果没有大显存，调小maxlen和batch size, 正常来说1080Ti够用
 #### 运行
