@@ -9,6 +9,7 @@ BERT-BiLSTM-CRF-NER模型来源于：https://github.com/macanv/BERT-BiLSTM-CRF-N
 
 ## 运行说明
 #### 环境
+python 3.7.3
 ubuntu 18.04  
 tensorflow 1.13.0  
 关于tensorflow1.14会报'tensorflow.contrib.estimator' has no attribute 'stop_if_no_decrease_hook'的问题，原因是tf.contrib在1.14中已经被弃用。  
